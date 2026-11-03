@@ -52,7 +52,7 @@ export default function Home() {
       <div className="ambient-grid" />
 
       <header className="nav wrap">
-        <a className="logo" href="#home">HAC<span>.</span></a>
+        <a className="logo" href="#home">HC<span>.</span></a>
         <nav><a href="#about">About</a><a href="#services">Services</a><a href="#work">Work</a></nav>
         <a className="navbtn" href="#contact">Let’s talk ↗</a>
       </header>
@@ -174,13 +174,13 @@ export default function Home() {
             <p className="contactIntro">Share a few details below. Your enquiry will be sent directly to my inbox.</p>
             <ContactForm />
             <hr /><label>ELSEWHERE</label>
-            <div className="social"><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram ↗</a></div>
+            <div className="social"><a href="https://www.instagram.com/henrycharlesab/" target="_blank" rel="noreferrer">Instagram ↗</a></div>
           </Reveal>
         </div>
       </section>
 
       <footer className="footer wrap">
-        <a className="logo" href="#home">HAC<span>.</span></a>
+        <a className="logo" href="#home">HC<span>.</span></a>
         <small>DESIGNED WITH INTENTION · BUILT FOR WHAT’S NEXT</small>
         <a href="#home">BACK TO TOP ↑</a>
         <small>© {new Date().getFullYear()} Henry Ameen Charles</small>

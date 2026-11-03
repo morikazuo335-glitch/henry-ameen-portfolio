@@ -47,7 +47,7 @@ export default async function WorkDetail({ params }) {
   if (!project) return <main className="detailPage wrap"><h1>Project not found</h1><Link href="/#work">Back to selected work</Link></main>;
   return (
     <main className="detailPage">
-      <header className="detailNav wrap"><Link className="logo" href="/">HAC<span>.</span></Link><Link className="navbtn" href="/#contact">Start a project ↗</Link></header>
+      <header className="detailNav wrap"><Link className="logo" href="/">HC<span>.</span></Link><Link className="navbtn" href="/#contact">Start a project ↗</Link></header>
       <section className="detailHero wrap">
         <p className="kicker">{project.number} / {project.type}</p><h1>{project.title}</h1><p className="detailSubtitle">{project.subtitle}</p>
         <div className={`caseVisual ${project.visual}`}><div className="caseWindow"><div className="caseWindowBar">● ● ● <span>{project.title.toLowerCase().replaceAll(" ", "")}.concept</span></div><div className="caseWindowContent"><small>SELECTED DIGITAL EXPERIENCE</small><strong>{project.title}</strong><i /><b>Thoughtful by design.</b><div className="caseShapes"><span /><span /><span /></div></div></div></div>
@@ -60,7 +60,7 @@ export default async function WorkDetail({ params }) {
         <article><label>INTENDED IMPACT</label><p>{project.outcome}</p></article>
       </section>
       <section className="detailCTA wrap"><h2>Have a project with a similar ambition?</h2><Link className="button" href="/#contact">Let’s talk about it ↗</Link></section>
-      <footer className="footer wrap"><Link className="logo" href="/">HAC<span>.</span></Link><Link href="/#work">Back to all projects ↑</Link></footer>
+      <footer className="footer wrap"><Link className="logo" href="/">HC<span>.</span></Link><Link href="/#work">Back to all projects ↑</Link></footer>
     </main>
   );
 }

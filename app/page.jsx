@@ -119,11 +119,15 @@ export default function Home() {
             <Link className="serviceHeadlineLink" href="#service-list"><h2>Thoughtful digital.<br /><em>Built to perform.</em></h2><span>EXPLORE HOW I CAN HELP ↘</span></Link>
             <p>From a first idea to a polished launch, I help turn your online presence into an experience people remember.</p>
           </Reveal>
-          {services.map(s => (
-            <motion.div className="service" key={s[0]} initial="hidden" whileInView="show" viewport={{ once: true, amount: .4 }} variants={reveal} whileHover={{ x: 10, backgroundColor: "rgba(166,138,255,.055)" }}>
-              <span>{s[0]}</span><h3>{s[1]}</h3><p>{s[2]}</p><b>↗</b>
-            </motion.div>
+          <div id="service-list">
+          {services.map((s, index) => (
+            <Link className="serviceLink" href={["/services/webflow", "/services/shopify", "/services/framer"][index]} key={s[0]}>
+              <motion.div className="service" initial="hidden" whileInView="show" viewport={{ once: true, amount: .4 }} variants={reveal} whileHover={{ x: 10, backgroundColor: "rgba(166,138,255,.055)" }}>
+                <span>{s[0]}</span><h3>{s[1]}</h3><p>{s[2]}</p><b>↗</b>
+              </motion.div>
+            </Link>
           ))}
+          </div>
         </div>
       </section>
 
@@ -167,8 +171,8 @@ export default function Home() {
           <Reveal><div><h2>Have something<br />good in <em>mind?</em></h2><p>Tell me what you’re building. I’d love to hear about it.</p></div></Reveal>
           <Reveal className="contactCard">
             <label>LET’S CREATE SOMETHING GREAT</label>
-            <a className="email" href="mailto:hello@henryameen.com">Let’s talk ↗</a>
-            <p>Replace this placeholder email with your real contact address before publishing.</p>
+            <p className="contactIntro">Share a few details below. Your enquiry will be sent directly to my inbox.</p>
+            <ContactForm />
             <hr /><label>ELSEWHERE</label>
             <div className="social"><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram ↗</a></div>
           </Reveal>

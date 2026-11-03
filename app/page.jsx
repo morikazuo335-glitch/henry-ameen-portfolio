@@ -2,6 +2,8 @@
 
 import { motion, useReducedMotion, useScroll, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
+import Link from "next/link";
+import ContactForm from "./contact-form";
 
 const services = [
   ["01", "Webflow Development", "Custom, responsive websites with polished interactions, thoughtful structure and an easy-to-manage CMS."],
@@ -10,9 +12,10 @@ const services = [
 ];
 
 const projects = [
-  ["01", "WEBFLOW · CONCEPT", "Digital presence, reimagined", "A refined brand experience built around clarity, typography and confident visual storytelling.", "one"],
-  ["02", "SHOPIFY · CONCEPT", "Commerce with character", "A product-first storefront concept designed to make the path to purchase seamless.", "two"],
-  ["03", "FRAMER · CONCEPT", "A sharper first impression", "A motion-led landing page concept with bold composition and a responsive layout.", "three"]
+  ["01", "WEBFLOW · CONCEPT", "Northstar Finance", "A clearer digital experience for a modern financial advisory brand.", "one", "northstar-finance"],
+  ["02", "SHOPIFY · CONCEPT", "Form & Field", "A product-first storefront concept for a contemporary home and lifestyle label.", "two", "form-and-field"],
+  ["03", "FRAMER · CONCEPT", "A sharper first impression", "A motion-led landing page concept with bold composition and a responsive layout.", "three", "arc-studio"],
+  ["04", "SAAS · UI CONCEPT", "Clarity at a glance", "A focused operations dashboard concept for turning activity into clear next steps.", "four", "pulseboard"]
 ];
 
 const reveal = {
@@ -113,7 +116,7 @@ export default function Home() {
         <div className="wrap">
           <Reveal><div className="kicker">02 / WHAT I DO <i /></div></Reveal>
           <Reveal className="sectionHead">
-            <h2>Thoughtful digital.<br /><em>Built to perform.</em></h2>
+            <Link className="serviceHeadlineLink" href="#service-list"><h2>Thoughtful digital.<br /><em>Built to perform.</em></h2><span>EXPLORE HOW I CAN HELP ↘</span></Link>
             <p>From a first idea to a polished launch, I help turn your online presence into an experience people remember.</p>
           </Reveal>
           {services.map(s => (
@@ -132,7 +135,7 @@ export default function Home() {
         </Reveal>
         <div className="projects">
           {projects.map((p, i) => (
-            <motion.article key={p[0]} initial={{ opacity: 0, y: 55, rotateX: 8 }} whileInView={{ opacity: 1, y: 0, rotateX: 0 }} viewport={{ once: true, amount: .2 }} transition={{ duration: .8, delay: i * .12, ease: [0.22, 1, .36, 1] }} whileHover={reduceMotion ? {} : { y: -12, rotateX: -2, scale: 1.015 }}>
+            <Link className="projectLink" href={`/work/${p[5] || "arc-studio"}`} key={p[0]}><motion.article initial={{ opacity: 0, y: 55, rotateX: 8 }} whileInView={{ opacity: 1, y: 0, rotateX: 0 }} viewport={{ once: true, amount: .2 }} transition={{ duration: .8, delay: i * .12, ease: [0.22, 1, .36, 1] }} whileHover={reduceMotion ? {} : { y: -12, rotateX: -2, scale: 1.015 }}>
               <div className={"art " + p[4]}>
                 <span>{p[0]}</span>
                 <div className="mock">

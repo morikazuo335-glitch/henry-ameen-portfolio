@@ -229,3 +229,72 @@ h2 { font-size: clamp(36px, 4.5vw, 58px); line-height: 1.13; letter-spacing: -3p
   html { scroll-behavior: auto; }
   *,*::before,*::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+
+/* Contact form, clickable case studies and service detail pages */
+.serviceHeadlineLink { display: inline-flex; flex-direction: column; gap: 16px; }
+.serviceHeadlineLink span { color: var(--purple); font: 10px 'DM Mono',monospace; letter-spacing: 1.5px; }
+.serviceHeadlineLink:hover h2 { color: #fff; }
+.serviceLink { display: block; }
+.projectLink { display: block; min-width: 0; }
+.projectLink:hover .projectInfo h3 { color: var(--purple); }
+.contactIntro { margin: 12px 0 20px; }
+.contactForm { display: grid; gap: 15px; }
+.contactForm label { display: grid; gap: 8px; color: #c9c3d8; font: 10px 'DM Mono',monospace; letter-spacing: .7px; }
+.formRow { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.contactForm input,.contactForm select,.contactForm textarea { width: 100%; border: 1px solid var(--line); border-radius: 5px; padding: 13px 14px; color: var(--text); background: #090910; font: 12px 'Manrope',sans-serif; outline: none; }
+.contactForm input:focus,.contactForm select:focus,.contactForm textarea:focus { border-color: var(--purple); box-shadow: 0 0 0 3px #a68aff18; }
+.contactForm select { color-scheme: dark; }
+.contactForm textarea { resize: vertical; min-height: 125px; line-height: 1.7; }
+.contactForm button:disabled { opacity: .65; cursor: wait; }
+.formFeedback { font-size: 12px !important; line-height: 1.7; margin: 0 !important; }
+.formFeedback.sent { color: #8de0ae !important; }
+.formFeedback.error { color: #ff9b9b !important; }
+.formPrivacy { color: var(--muted); font-size: 10px; }
+.detailPage { min-height: 100vh; background: radial-gradient(circle at 80% 20%,#39245d55,transparent 32%),var(--bg); }
+.detailNav { height: 86px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); }
+.detailHero { padding-top: 95px; }
+.detailHero .kicker { margin-bottom: 25px; }
+.detailHero h1 { font-size: clamp(52px,9vw,100px); letter-spacing:-5px; }
+.detailSubtitle { max-width:680px; color:var(--muted); font-size:18px; line-height:1.8; margin-top:20px; }
+.caseVisual { margin-top:55px; height:470px; display:grid; place-items:center; overflow:hidden; border:1px solid var(--line); position:relative; }
+.caseVisual.finance { background:radial-gradient(circle at 70% 35%,#42618a,#151d30 55%,#0b0d15); }
+.caseVisual.commerce { background:radial-gradient(circle at 65% 40%,#947252,#34271e 55%,#110f0e); }
+.caseVisual.studio { background:radial-gradient(circle at 70% 35%,#6445a6,#211735 55%,#0c0a14); }
+.caseVisual.dashboard { background:radial-gradient(circle at 65% 35%,#256b75,#102b35 55%,#090e15); }
+.caseWindow { width:min(680px,82%); min-height:300px; background:#f5f2ed; color:#17151b; box-shadow:0 30px 100px #0009; transform:rotate(-2deg); }
+.caseWindowBar { padding:14px 18px; border-bottom:1px solid #ddd; font-size:9px; color:#7059a1; }
+.caseWindowBar span { margin-left:25px; color:#777; }
+.caseWindowContent { padding:35px 9%; position:relative; min-height:250px; overflow:hidden; }
+.caseWindowContent small { display:block; font:9px 'DM Mono',monospace; letter-spacing:1px; color:#6e6480; }
+.caseWindowContent strong { display:block; max-width:420px; font-size:clamp(30px,5vw,55px); line-height:1; margin-top:24px; letter-spacing:-2px; position:relative; z-index:1; }
+.caseWindowContent i { display:block; width:65px; height:3px; background:#9272c9; margin-top:20px; }
+.caseWindowContent b { display:block; margin-top:16px; font-size:13px; color:#5d536d; }
+.caseShapes span { position:absolute; display:block; border-radius:50%; width:150px; height:150px; right:10%; bottom:-50px; background:linear-gradient(135deg,#b69be9,#60458e); opacity:.8; }
+.caseShapes span:nth-child(2) { width:90px;height:90px;right:26%;bottom:40px;opacity:.5; }
+.caseShapes span:nth-child(3) { width:40px;height:40px;right:7%;bottom:115px;opacity:.7; }
+.conceptNotice { color:var(--muted); font:10px 'DM Mono',monospace; margin-top:18px; letter-spacing:.6px; }
+.detailBody { display:grid; grid-template-columns:1fr 1fr; gap:50px 70px; padding-top:100px; padding-bottom:100px; }
+.detailBody article { border-top:1px solid var(--line); padding-top:22px; }
+.detailBody label { color:var(--purple); font:10px 'DM Mono',monospace; letter-spacing:1.5px; }
+.detailBody p,.detailBody li { color:var(--muted); font-size:14px; line-height:2; margin-top:16px; }
+.detailBody ul { padding-left:18px; }
+.detailCTA { border-top:1px solid var(--line); padding-top:55px; padding-bottom:90px; display:flex; align-items:center; justify-content:space-between; gap:30px; }
+.detailCTA h2 { max-width:650px; font-size:clamp(28px,4vw,48px); }
+.serviceDetailVisual { margin-top:55px; min-height:350px; padding:45px; border:1px solid #a68aff35; background:radial-gradient(circle at 75% 50%,#6c4ab255,transparent 35%),linear-gradient(120deg,#161222,#0d0b14); position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:space-between; }
+.serviceDetailVisual span { font:10px 'DM Mono',monospace; color:var(--muted); letter-spacing:2px; }
+.serviceDetailVisual strong { font-size:clamp(38px,7vw,76px); line-height:1.1; letter-spacing:-3px; position:relative; z-index:1; }
+.serviceDetailVisual em { color:var(--purple); font-style:normal; }
+.serviceDetailVisual i { position:absolute; right:12%; top:20%; font-size:170px; color:#a68aff55; font-style:normal; animation:slow-spin 24s linear infinite; }
+@media(max-width:700px) {
+ .formRow,.detailBody { grid-template-columns:1fr; }
+ .detailHero { padding-top:65px; }
+ .detailHero h1 { letter-spacing:-3px; }
+ .detailSubtitle { font-size:15px; }
+ .caseVisual { height:330px; }
+ .caseWindow { width:90%; min-height:240px; }
+ .caseWindowContent { min-height:190px; padding:25px 7%; }
+ .detailCTA { align-items:flex-start; flex-direction:column; }
+ .serviceDetailVisual { min-height:280px; padding:28px; }
+ .serviceDetailVisual i { font-size:110px; right:5%; }
+}

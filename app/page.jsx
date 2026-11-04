@@ -74,7 +74,7 @@ export default function Home() {
             <a className="button" href="#work">Explore my work <span>↗</span></a>
             <a className="simpleLink" href="#about">Get to know me ↓</a>
           </motion.div>
-          <div className="meta">BASED IN NIGERIA <span /> WORKING WORLDWIDE</div>
+          <div className="meta">BASED IN AUSTRALIA <span /> WORKING WORLDWIDE</div>
         </div>
 
         <motion.div className="portraitStage" style={reduceMotion ? {} : { y: portraitY, rotate: portraitRotate }}>
